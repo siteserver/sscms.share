@@ -1,0 +1,46 @@
+{
+  "name": "share",
+  "displayName": "分享插件",
+  "description": "一键分享到微信、微博、QQ空间、QQ好友、豆瓣、Facebook、Twitter、Linkedin、Google+等",
+  "version": "1.0.0",
+  "license": "AGPL-3.0",
+  "publisher": "sscms",
+  "engines": {
+    "sscms": "^7.0.10"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "分享",
+    "一键分享"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siteserver/sscms.share"
+  },
+  "icon": "/assets/share/logo.svg",
+  "output": "",
+  "main": "SSCMS.Share.dll",
+  "applyToSites": true,
+  "applyToChannels": false,
+  "extensions": {
+    "permissions": {
+      "site_share": {
+        "text": "分享设置",
+        "type": ["web", "wx"]
+      }
+    },
+    "menus": {
+      "site_share": {
+        "text": "分享设置",
+        "iconClass": "ion-share",
+        "link": "./share/",
+        "type": ["web", "wx"],
+        "permissions": [
+          "site_share"
+        ]
+      }
+    }
+  }
+}
