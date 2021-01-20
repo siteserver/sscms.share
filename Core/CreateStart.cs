@@ -67,7 +67,7 @@ namespace SSCMS.Share.Core
             }
 
             var axiosJsUrl = _pathManager.GetSiteFilesUrl(site, Libraries.AxiosJs);
-            var wxShareJsUrl = _pathManager.GetApiHostUrl(site, $"assets/share/js/wxShare.js");
+            var wxShareJsUrl = _pathManager.GetApiHostUrl(site, "assets/share/js/wxShare.js");
             var apiUrl = _pathManager.GetApiHostUrl(site, "api/share/wx");
 
             context.FootCodes.TryAdd($"{ShareManager.PluginId}_weixinShare", $@"
