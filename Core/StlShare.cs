@@ -46,7 +46,7 @@ namespace SSCMS.Share.Core
             var origin = string.Empty;
             var description = string.Empty;
             var image = string.Empty;
-            var sites = "wechat, weibo, qq, qzone, douban";
+            var sites = "weibo, qq, qzone, douban";
             var disabled = string.Empty;
             var wechatQrcodeTitle = string.Empty;
             var wechatQrcodeHelper = string.Empty;
@@ -104,6 +104,12 @@ namespace SSCMS.Share.Core
 
             var settings = await _shareManager.GetSettingsAsync(context.SiteId);
             var site = await _siteRepository.GetAsync(context.SiteId);
+
+            if (settings.IsWxShare)
+            {
+                sites += ",wechat";
+            }
+
             var cssUrl = _pathManager.GetApiHostUrl(site, "/assets/share/css/share.min.css");
             var jsUrl = _pathManager.GetApiHostUrl(site, "/assets/share/js/social-share.min.js");
 
