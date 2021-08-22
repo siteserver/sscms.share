@@ -10,6 +10,7 @@ using SSCMS.Utils;
 
 namespace SSCMS.Share.Core
 {
+    //https://github.com/overtrue/share.js
     public class StlShare : IPluginParseAsync
     {
         private const string AttributeUrl = "url";      // 网址，默认使用 window.location.href

@@ -35,7 +35,7 @@ var methods = {
       }
     }).then(function (response) {
       var res = response.data;
-      
+
       $this.siteUrl = res.siteUrl;
       $this.ipAddress = res.ipAddress;
       $this.settingsForm = Object.assign({}, res.settings);
@@ -54,6 +54,7 @@ var methods = {
     utils.loading(this, true);
     $api.post($urlWxShare, {
       siteId: this.siteId,
+      isWxShare: this.wxShareForm.isWxShare,
       mpAppId: this.wxShareForm.mpAppId,
       mpAppSecret: this.wxShareForm.mpAppSecret
     }).then(function (response) {
