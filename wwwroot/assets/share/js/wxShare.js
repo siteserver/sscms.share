@@ -12,7 +12,7 @@ if (window.navigator.userAgent.toLowerCase().indexOf('micromessenger') > 0) {
         if (res.success) {
             wx.config({
                 debug: false,
-                appId: res.apiId,
+                appId: res.appId,
                 timestamp: res.timestamp,
                 nonceStr: res.nonceStr,
                 signature: res.signature,
